@@ -4,6 +4,9 @@
 *.obj
 *.elf
 
+shellcode
+test
+
 # Precompiled Headers
 *.gch
 *.pch
