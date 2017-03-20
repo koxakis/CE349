@@ -22,8 +22,8 @@ const char code[] =
 "\xbf\x00\x00\x00\x00"	// mov    $0x0,%edi
 "\xe8\x9a\xfe\xff\xff"	// callq  400450 <exit@plt>
 */
-	"\x48\x31\xc0"				// 1: xor %rax, %rax
-	"\x48\x31\xd2" 				// 2: xor %rdx, %rdx
+	"\x48\x31\xc0"				//  xor %rax, %rax
+	"\x48\x31\xd2" 				//  xor %rdx, %rdx
 	"\x48\x31\xf6"				//	xor %rsi, %rsi
 	"\x48\x31\xff"				// 	xor %rdi, %rdi
 	"\x55" 						// 	push   %rbp
