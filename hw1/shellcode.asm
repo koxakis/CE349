@@ -24,10 +24,11 @@ mov rsi, rsp
 mov dl, 8
 syscall
 ;restore stack
-add rsp, 8
+;add rsp, 8
 
 xor rax, rax
-;exit(int ret)
+;execve(path -> rsi, args -> rdi, envp -> dl)
 mov al,59
 mov rsi, rsp
+
 syscall
