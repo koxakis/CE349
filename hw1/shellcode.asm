@@ -30,5 +30,6 @@ xor rax, rax
 ;execve(path -> rsi, args -> rdi, envp -> dl)
 mov al,59
 mov rsi, rsp
-
+xor rdi, rdi
+xor rdx, rdx
 syscall
