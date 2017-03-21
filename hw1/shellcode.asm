@@ -33,3 +33,9 @@ mov rsi, rsp
 xor rdi, rdi
 xor rdx, rdx
 syscall
+
+xor rax, rax
+;exit(int ret)
+mov al,60
+xor rdi, rdi
+syscall
