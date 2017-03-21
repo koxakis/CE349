@@ -3,10 +3,10 @@
 #include<stdlib.h>
 
 int main( int argc, char *argv[]){
-    
+
     char *name[2];
 
-    name[0] = "/bin/sh";
+    name[0] = "/bin//sh";
     name[1] = NULL;
 
     execve(name[0], name, NULL);
@@ -14,4 +14,4 @@ int main( int argc, char *argv[]){
     exit(0);
 
     return (0);
-} 
+}
