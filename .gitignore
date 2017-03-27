@@ -4,6 +4,7 @@
 *.obj
 *.elf
 
+a_hole
 shellcode
 test
 
