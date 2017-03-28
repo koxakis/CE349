@@ -7,7 +7,7 @@
 int bof(char *str)
 {
 	char buffer[48];
-	printf("%p\n", buffer);
+	printf ("%p\n", buffer);
 	/* The following statement has a buffer overflow problem */
 	strcpy(buffer, str);
 	return 1;
@@ -16,9 +16,10 @@ int main(int argc, char **argv)
 {
 	char str[517];
 	FILE *badfile;
-	printf("%p\n", str);
+	
 	badfile = fopen("badfile", "r");
 	fread(str, sizeof(char), 517, badfile);
+
 	bof(str);
 	printf("Returned Properly\n");
 	return 1;

