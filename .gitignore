@@ -4,9 +4,16 @@
 *.obj
 *.elf
 
+# Hw 1 untracked files
 a_hole
 shellcode
 test
+
+# Hw 2 untracked files
+.gdb_history
+badfile
+peda-session-retlib.txt
+retlib
 
 shellcode_def
 # Precompiled Headers

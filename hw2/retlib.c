@@ -1,7 +1,7 @@
 /* a_hole successor*/
 
-#include <stdlib.c>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 int bof(FILE *badfile){
