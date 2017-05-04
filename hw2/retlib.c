@@ -8,7 +8,7 @@ int bof(FILE *badfile){
 	char buffer[12];
 	//printf(" %p\n", buffer);
 	/* Buffer overflow point */
-	fread(buffer, sizeof(char), 64, badfile);
+	fread(buffer, sizeof(char), 80, badfile);
 
 	return 1;
 }
